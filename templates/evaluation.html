@@ -19,7 +19,7 @@
   <label for="date">Wähle ein Datum:</label>
     <input placeholder="Datum auswählen" type="date" id="date" class="form-control" name="date">
     <br>
-    <button type="submit" class="btn btn-light">Bestätigen</button>
+    <button type="submit" class="btn btn-light">Senden</button>
 </div>
 
 
@@ -27,11 +27,11 @@
 
 <br>
 
-<h5>Übersicht vom *Datum*</h5>
+<h5>Übersicht vom {{date}}</h5>
 
 <!-- damit div-Inhalt unverändert an Jinja überreicht wird, wird |safe angefügt -->
 
-<!--- {{ viz_div|safe }} --->
+{{ viz_div|safe }}
 
 
 {% endblock %}

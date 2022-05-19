@@ -18,7 +18,8 @@ können also als Jinja Blöcke ausgelagert und in mehreren HTML Codes eingebunde
 
 <!-- Formular (dropdown) -->
 
-<form action="/drinks_overview" method="POST">
+    <form action="/drinks-overview" method="POST">
+
 
 
   <div class="mb-3"> <!-- mb-3 steht für design -->
@@ -54,7 +55,7 @@ können also als Jinja Blöcke ausgelagert und in mehreren HTML Codes eingebunde
       </thead>
       <tbody>
       {% for eintrag in liste %}
-      <!-- mittels jinja im html --> for loop von python in html ausführen (wichtig: loop wieder schliessen) -->
+      <!-- mittels jinja im html for loop von python in html ausführen (wichtig: loop wieder schliessen) -->
       <!-- hier wird mittels Jinja ein anderer Wert für z.B. eintrag["datum"] genommen (der, der im Python-Dok. als datum definiert wurde) -->
       <tr>
           <td>{{ eintrag["datum"] }}</td>

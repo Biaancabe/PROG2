@@ -39,3 +39,26 @@ def drinks_laden():
         datei_inhalt = {}
 
     return datei_inhalt
+
+
+def get_data():
+    getraenke = drinks_laden()
+    getraenk = []
+    anzahl = []
+    datum = []
+    for key, value in getraenke.items():
+        getraenk.append(value["getraenk"])
+        anzahl.append(int(value["anzahl"]))
+        datum.append(value["datum"])
+    return getraenk, anzahl
+
+def get_data2():
+    getraenke = drinks_laden()
+    getraenk = []
+    anzahl = []
+    datum = []
+    for key, value in getraenke.items():
+        getraenk.append(value["getraenk"])
+        anzahl.append(int(value["anzahl"]))
+        datum.append(value["datum"])
+    return anzahl, datum
