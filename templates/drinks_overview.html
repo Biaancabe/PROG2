@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drinks Overview</title>
+</head>
+<body>
+<!-- Teile des HTML Codes (hier Navigation, Design, etc.) wiederholen sich +
+können also als Jinja Blöcke ausgelagert und in mehreren HTML Codes eingebunden werden mittels geschweiften Klammer + % -->
+
+<!-- holt CSS & Bootstrap Infos aus dem base.html -->
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Getränkeübersicht</h1>
+    <br/>
+
+<!-- Formular (dropdown) -->
+
+<form action="/drinks_overview" method="POST">
+
+
+  <div class="mb-3"> <!-- mb-3 steht für design -->
+    <label for="getraenk_wahl" class="form-label">Getränk Auswählen</label>
+    <select class="form-select" aria-label="Default select example" name="getraenk_wahl" id="getraenk_wahl">
+    <option selected>Getränk</option>
+    <option value="Bier 3dl">Bier 3dl</option>
+    <option value="Bier 5dl">Bier 5dl</option>
+    <option value="Weisswein 1dl">Weisswein 1dl</option>
+    <option value="Weisswein Flasche">Weisswein Flasche</option>
+    <option value="Rotwein 1dl">Rotwein 1dl</option>
+    <option value="Rotwein Flasche">Rotwein Flasche</option>
+    <option value="Rosé 1dl">Rosé 1dl</option>
+    <option value="Rosé Flasche">Rosé Flasche</option>
+    <option value="Vodka Redbull">Vodka Redbull</option>
+    <option value="Vodka Mate">Vodka Mate</option>
+    <option value="Gin Tonic">Gin Tonic</option>
+    </select>
+  </div>
+
+<button type="submit" class="btn btn-light">Senden</button>
+</form>
+
+
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Datum</th>
+          <th scope="col">Getränk</th>
+          <th scope="col">Anzahl</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for eintrag in liste %}
+      <!-- mittels jinja im html --> for loop von python in html ausführen (wichtig: loop wieder schliessen) -->
+      <!-- hier wird mittels Jinja ein anderer Wert für z.B. eintrag["datum"] genommen (der, der im Python-Dok. als datum definiert wurde) -->
+      <tr>
+          <td>{{ eintrag["datum"] }}</td>
+          <td>{{ eintrag["getraenk"] }}</td>
+          <td>{{ eintrag["anzahl"] }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+      <tfoot>
+          <tr>
+              <td>Total</td>
+              <td></td>
+              <td>{{ summe }}</td>
+          </tr>
+      </tfoot>
+    </table>
+
+
+
+
+{% endblock %}
+</body>
+</html>

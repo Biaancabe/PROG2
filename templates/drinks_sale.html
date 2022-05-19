@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drinks Sale</title>
+</head>
+<body>
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Getränke Eingabe</h1>
+<br/><br/>
+
+<form action="/eingabebestaetigung" method="POST">
+
+
+  <div class="mb-3">
+    <label for="bestaetigung" class="form-label">Getränk Auswählen</label>
+    <select class="form-select" aria-label="Default select example" name="getraenk" id="bestaetigung">
+    <option selected>Getränk</option>
+    <option value="Bier 3dl">Bier 3dl</option>
+    <option value="Bier 5dl">Bier 5dl</option>
+    <option value="Weisswein 1dl">Weisswein 1dl</option>
+    <option value="Weisswein Flasche">Weisswein Flasche</option>
+    <option value="Rotwein 1dl">Rotwein 1dl</option>
+    <option value="Rotwein Flasche">Rotwein Flasche</option>
+    <option value="Rosé 1dl">Rosé 1dl</option>
+    <option value="Rosé Flasche">Rosé Flasche</option>
+    <option value="Vodka Redbull">Vodka Redbull</option>
+    <option value="Vodka Mate">Vodka Mate</option>
+    <option value="Gin Tonic">Gin Tonic</option>
+    </select>
+  </div>
+
+    <div class="mb-3">
+    <label for="anzahl" class="form-label">Anzahl Getränke</label>
+    <input type="text" class="form-control" aria-describedby="emailHelp" name="anzahl" id="anzahl">
+  </div>
+
+
+  <button type="submit" class="btn btn-light">Bestätigen</button>
+</form>
+
+
+{% endblock %}
+
+
+</body>
+</html>

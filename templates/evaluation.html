@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluation</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Auswertung</h1>
+<h4>Evaluation Allgemein</h4>
+
+<!-- Bootstrap um datum auszuwählen -->
+
+<form action="/evaluation" method="POST">
+<div class="md-form md-outline input-with-post-icon datepicker">
+  <label for="date">Wähle ein Datum:</label>
+    <input placeholder="Datum auswählen" type="date" id="date" class="form-control" name="date">
+    <br>
+    <button type="submit" class="btn btn-light">Bestätigen</button>
+</div>
+
+
+</form>
+
+<br>
+
+<h5>Übersicht vom *Datum*</h5>
+
+<!-- damit div-Inhalt unverändert an Jinja überreicht wird, wird |safe angefügt -->
+
+<!--- {{ viz_div|safe }} --->
+
+
+{% endblock %}
+
+</body>
+</html>

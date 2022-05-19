@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestätigung</title>
+</head>
+<body>
+<!-- erscheint, wenn Getränk erfasst wurde -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Vielen Dank für deine Eingabe!</h1>
+
+    <br/><br/>
+
+    <p>Eingabe erfolgreich!!</p>
+    <p>Für weitere Eingaben klicke auf den untenstehenden Button:</p>
+
+<!-- bietet Möglichkeit weitere Getränke zu erfassen und somit auf Seite zurück zukehren
+welche bei def drinks definiert wurde -->
+    <a class="btn btn-light" href="{{url_for("drinks")}}" role="button">Weitere Eingaben</a>
+{% endblock %}
+
+<!-- url_for zum Erstellen einer URL. Damit kein Durcheinander bei Ändern von URLs in gesamten Anwendung entsteht.
+Ohne url_for bei einer Änderung dir URL auf jeder Seite, auf der der Link vorhanden ist, ändern. -->
+
+</body>
+</html>

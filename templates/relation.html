@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relation</title>
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Vergleich</h1>
+<h4>Relation Allgemein</h4>
+
+<form action="/relation" method="POST">
+
+ <div class="btn-group">
+    <ul style="margin:0;padding:0;">
+    <label for="getraenk1" class="form-label">Getränk 1 Auswählen</label>
+    <select class="form-select" aria-label="Default select example" name="getraenk1" id="getraenk1">
+        <option selected>Getränk 1</option>
+        <option value="Bier 3dl">Bier 3dl</option>
+        <option value="Bier 5dl">Bier 5dl</option>
+        <option value="Weisswein 1dl">Weisswein 1dl</option>
+        <option value="Weisswein Flasche">Weisswein Flasche</option>
+        <option value="Rotwein 1dl">Rotwein 1dl</option>
+        <option value="Rotwein Flasche">Rotwein Flasche</option>
+        <option value="Rosé 1dl">Rosé 1dl</option>
+        <option value="Rosé Flasche">Rosé Flasche</option>
+        <option value="Vodka Redbull">Vodka Redbull</option>
+        <option value="Vodka Mate">Vodka Mate</option>
+        <option value="Gin Tonic">Gin Tonic</option>
+    </select>
+    </ul>
+    <ul style="margin-right:20px;">
+    <label for="getraenk2" class="form-label">Getränk 2 Auswählen</label>
+    <select class="form-select" aria-label="Default select example" name="getraenk2" id="getraenk2">
+    <option selected>Getränk 2</option>
+        <option value="Bier 3dl">Bier 3dl</option>
+        <option value="Bier 5dl">Bier 5dl</option>
+        <option value="Weisswein 1dl">Weisswein 1dl</option>
+        <option value="Weisswein Flasche">Weisswein Flasche</option>
+        <option value="Rotwein 1dl">Rotwein 1dl</option>
+        <option value="Rotwein Flasche">Rotwein Flasche</option>
+        <option value="Rosé 1dl">Rosé 1dl</option>
+        <option value="Rosé Flasche">Rosé Flasche</option>
+        <option value="Vodka Redbull">Vodka Redbull</option>
+        <option value="Vodka Mate">Vodka Mate</option>
+        <option value="Gin Tonic">Gin Tonic</option>
+    </select>
+    </ul>
+  </div>
+
+<button type="submit" class="btn btn-light" style="margin-top:15px;">Senden</button>
+
+</form>
+
+
+
+</form>
+
+<br>
+
+<h5>Relation von *Getränk1* und *Getränk2*</h5>
+<!--- {{ viz_div|safe }} --->
+
+
+{% endblock %}
+
+</body>
+</html>
