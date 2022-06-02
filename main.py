@@ -80,6 +80,7 @@ def total_berechnen(getraenke):
 
 # Basic Balkendiagramm anhand allen libs (unsortiert)
 # Funktion, die libs ausrechnet und die sollen dann dargestellt werden --> libs dynamisch generiert
+
 # Evaluation anhand Datum:
 @app.route("/evaluation", methods=["POST", "GET"])
 def evaluation():

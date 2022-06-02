@@ -15,6 +15,9 @@ kontrolliert werden und anhand der Nachfrage können Anpassungen beim Preis gema
 Das Projekt soll diese Problem lösen. Durch das tägliche eintragen von den verkauften Getränken inkl. Verkaufspreisen soll Ende Monat ersichtlich werden,
 welches Getränk am Besten lief, welche Abende brachten den höchsten Umsatz, gibt es Trends welche Getränke zu welchen Zeiten / Tagen konsumiert werden. Und noch viele weitere Datenauswertungen sind möglich.
 
+*Flowdiagramm*
+![Diagramm](./static/pictures/Ablaufdiagramm_Projekt_Pythonbaby.png)
+
 
 <h3>Betrieb</h3>
 *Welche zusätzliche Pakete müssen bei Bedarf installiert werden. (Muss im Normalfall nicht beachtet werden. Python muss nicht erwähnt werden, da das bei einem Python Projekt impliziert ist.)*
