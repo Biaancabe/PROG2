@@ -16,3 +16,8 @@ body{
     background: lightgray;
 
 }
+
+#img1 {
+    position: absolute;
+    left: 0px;
+}
