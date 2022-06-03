@@ -67,12 +67,11 @@ def overview():
         summe = total_berechnen(getraenke_liste)
         return render_template("drinks_overview.html", liste=getraenke_liste, summe=summe)
 
-
 # Total berechnung:
 def total_berechnen(getraenke):
     alle_anzahl = 0
     for item in getraenke:
-        alle_anzahl += int(item["anzahl"])
+        alle_anzahl += float(item["anzahl"])
     return alle_anzahl
 
 

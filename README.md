@@ -65,10 +65,14 @@ Somit bekommt man ein Überblick, welches Getränk am Abend am besten performt h
 
 
 <h3>Ungelöste/unbearbeitete Probleme</h3>
+- Wenn man ein Getränk bei "Sales" eingibt, und dabei kein Getränk auswählt und keine Anzahl eingibt, wird es 
+trotzdem in die Datenbank eingefügt und dadurch kommt es zu Fehlermeldungen da Anzahl = "" ist.
+- Wenn man bei "Evaluation" ein Datum auswählt, bei dem Nichts eingetragen ist. Könnte man 
 *Was wurde nicht gelöst*
 
 
 *Welche Verbesserungen könnten noch gemacht werden.*
-
+- Wenn man bei "Evaluation" ein Datum auswählt, bei dem Nichts eingetragen ist. 
+Könnte man eine Meldung bekommen dass Nichts verkauft wurde, anstelle des Diagramms.
 
 
