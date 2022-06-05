@@ -3,6 +3,8 @@ import json
 
 # Alle Informationen in der Klammer werden in Json Datei gespeichert.
 # Man öffnet Json Datei und schreibt diese Informationen hinein. Datei steht für json-datei
+
+
 def speichern(datei, key, value, zeitpunkt, datum):
     try:
         with open(datei) as open_file:
@@ -14,7 +16,6 @@ def speichern(datei, key, value, zeitpunkt, datum):
     with open(datei, "w") as open_file:
         # json.dump wandelt ein Python-Objekt in einen json-String um
         json.dump(datei_inhalt, open_file)
-
 
 
 def eingabebestaetigung(getraenk, anzahl):
@@ -51,6 +52,7 @@ def get_data():
         anzahl.append(int(value["anzahl"]))
         datum.append(value["datum"])
     return getraenk, anzahl
+
 
 def get_data2():
     getraenke = drinks_laden()
