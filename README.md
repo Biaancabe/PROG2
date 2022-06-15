@@ -26,6 +26,8 @@ Damit die Applikation korrekt funktioniert, müssen folgende Module importiert w
 *Welch Datei muss ausgeführt werden*
 <br> **main.py**
 
+Um gute Datenauswertungen zu bekommen wird empfohlen ein Datum zwischen
+dem 3. Juni 2022 & 9. Juni 2022 auszuwählen.
 
 <h3>Benutzung</h3>
 <h4>Home</h4>
